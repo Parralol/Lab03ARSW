@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Ejercicio6 {
+    @SuppressWarnings({ "unused", "resource" })
     public static void main(String[] args) throws InterruptedException {
         try {
             byte[] sendBuf = new byte[256];

@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 
 public class DatagramTimeClient {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         @SuppressWarnings("unused")
         byte[] sendBuf = new byte[256];
