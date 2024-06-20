@@ -1,9 +1,7 @@
 package edu.escuelaing.arsw.ase.app.introduccion;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
+
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -56,8 +54,6 @@ public class Ejercicio5 {
                     String[] resp = { res[0], res[1], "FILE NOT FOUND: " + e.getMessage() };
                     res = resp;
                 }
-            } else {
-                String[] resp;
             }
         } else {
             res = document(a[0]);
@@ -69,7 +65,6 @@ public class Ejercicio5 {
     private static String[] document(String a) {
         String fileType = getFileType(a);
         String type;
-        String body;
         boolean image = false;
         System.out.println(fileType);
         if (fileType.equals("css")) {
