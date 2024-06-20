@@ -9,7 +9,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Base64;
 
 public class Ejercicio5 {
@@ -38,7 +37,7 @@ public class Ejercicio5 {
     private static String[] getPath(String a) {
         String[] pathQuery = a.split(" ");
         String[] path = pathQuery[1].split("\\?");
-        System.out.println(Arrays.toString(path));
+    
         return path;
     }
 
@@ -58,7 +57,7 @@ public class Ejercicio5 {
         } else {
             res = document(a[0]);
         }
-        System.out.println(Arrays.toString(res));
+        
         return res;
     }
 
@@ -66,7 +65,6 @@ public class Ejercicio5 {
         String fileType = getFileType(a);
         String type;
         boolean image = false;
-        System.out.println(fileType);
         if (fileType.equals("css")) {
             type = HttpContext.getCss();
         } else if (fileType.equals("js")) {
@@ -172,7 +170,6 @@ public class Ejercicio5 {
                 out.close();
             } else {
                 String[] res = generateResponse(a);
-                System.out.println(textHeader);
                 outputLine = res[1];
                 if (!Boolean.valueOf(res[0])) {
                     
