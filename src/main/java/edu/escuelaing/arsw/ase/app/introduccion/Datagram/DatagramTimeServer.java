@@ -17,7 +17,7 @@ public class DatagramTimeServer {
         try {
             socket = new DatagramSocket(4445);
         } catch (SocketException ex) {
-            Logger.getLogger(DatagramTimeServer.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(DatagramTimeServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
