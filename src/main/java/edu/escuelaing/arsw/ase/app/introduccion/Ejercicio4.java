@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 
 
 public class Ejercicio4 {
@@ -34,11 +35,17 @@ public class Ejercicio4 {
         String inputLine, outputLine;
         String res = "";
         while ((inputLine = in.readLine()) != null) {
-            if(inputLine.split(":")[0].equals("fun")) changeOperation(inputLine);
+            if(inputLine.split(":")[0].equals("fun"))  res = changeOperation(inputLine);
             else{
-                res = Double.toString(operation(inputLine));
-                System.out.println("Operacion:" + inputLine);
-                System.out.println("res:" + res);
+                Double op = operation(inputLine);
+                if(op.equals(-1.0)){
+                    res = "0.0";
+                }else{
+                    res = String.format("%.3f", op);
+                    System.out.println("Operacion:" + inputLine);
+                    System.out.println("res:" + res);
+                }
+                
 
             }
             System.out.println("Mensaje:" + inputLine);
@@ -55,7 +62,8 @@ public class Ejercicio4 {
 
     private static String changeOperation(String op){
         String operation = op.split(":")[1];
-        if(!operation.equals("sin")|| !operation.equals("cos") || !operation.equals("tan")) return "Not accepted operation: " + op + " does not exist";
+        System.out.println(operation);
+        if(!operation.equals("sin") && !operation.equals("cos") && !operation.equals("tan")) return "Not accepted operation: " + op + " does not exist";
         currentOp = operation;
         return "change completed to " + op + " operation";
     }
@@ -71,49 +79,66 @@ public class Ejercicio4 {
         if(op.split("/").length > 1){
             String[] resp = op.split("/");
             div = true;
-            System.out.println("INDEX: " + resp[0].indexOf('?'));
-            if(resp[0].indexOf('?') >= 0){
+            System.out.println(Arrays.toString(resp) + Boolean.toString(resp[0].equals("?")));
+            if(resp[0].equals("?") ){
                 val1 = Math.PI;
                 val2 = Double.parseDouble(resp[1]);
-            }else if(resp[1].indexOf('?') >= 0){
+            }else if(resp[1].equals("?")){
                 val1 = Double.parseDouble(resp[0]);
                 val2 = Math.PI;
             }else{
-
+                val1 = Double.parseDouble(resp[0]);
+                val2 = Double.parseDouble(resp[1]);
             }
         } 
         else if(op.split("\\+ ").length > 1){
             String[] resp = op.split("\\+");
             sum = true;
-            if(resp[0].indexOf('?') >= 0){
+            if(resp[0].equals("?")){
                 val1 = Math.PI;
                 val2 = Double.parseDouble(resp[1]);
-            }else if(resp[1].indexOf('?') >= 0){
+            }else if(resp[1].equals("?")){
                 val1 = Double.parseDouble(resp[0]);
                 val2 = Math.PI;
+            }else{
+                val1 = Double.parseDouble(resp[0]);
+                val2 = Double.parseDouble(resp[1]);
             }
         }
         else if(op.split("\\*").length > 1){
             String[] resp = op.split("\\*");
             mult = true;
-            if(resp[0].indexOf('?') >= 0){
+            if(resp[0].equals("?")){
                 val1 = Math.PI;
                 val2 = Double.parseDouble(resp[1]);
-            }else if(resp[1].indexOf('?') >= 0){
+            }else if(resp[1].equals("?")){
                 val1 = Double.parseDouble(resp[0]);
                 val2 = Math.PI;
+            }else{
+                val1 = Double.parseDouble(resp[0]);
+                val2 = Double.parseDouble(resp[1]);
             }
         }
         else if(op.split("\\-").length > 1){
             String[] resp = op.split("\\-");
             rest = true;
-            if(resp[0].indexOf('?') >= 0){
+            if(resp[0].equals("?")){
                 val1 = Math.PI;
                 val2 = Double.parseDouble(resp[1]);
-            }else if(resp[1].indexOf('?') >= 0){
+            }else if(resp[1].equals("?")){
                 val1 = Double.parseDouble(resp[0]);
                 val2 = Math.PI;
+            }else{
+                val1 = Double.parseDouble(resp[0]);
+                val2 = Double.parseDouble(resp[1]);
             }
+        }else{
+            if(op.equals("?")){
+                val1=Math.PI;
+            }else{
+                val1 = Double.parseDouble(op);
+            }
+            
         }
         System.out.println(val1 + "-----------" + val2);
         if(currentOp.equals("sin")){
@@ -138,7 +163,7 @@ public class Ejercicio4 {
             if(mult)res = Math.tan(val1 * val2);
             else res = Math.tan(val1);
         }
-
+        System.out.println(res);
         return res;
     }
 }
