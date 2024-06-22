@@ -16,7 +16,6 @@ public class Ejercicio2 {
         BufferedReader read = new BufferedReader(
                 new InputStreamReader(System.in));
         String name = read.readLine();
-        System.out.println(name);
         URL google = new URL(name);
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()))) {
             String inputLine = null;
@@ -30,7 +29,7 @@ public class Ejercicio2 {
     }
 
     private static void saveData(String a) {
-        File file = new File("results/result.html");
+        File file = new File("results/resultado.html");
         String data = a;
         try (FileOutputStream fos = new FileOutputStream(file);
                 BufferedOutputStream bos = new BufferedOutputStream(fos)) {
