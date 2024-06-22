@@ -21,8 +21,7 @@ public class Ejercicio2 {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(google.openStream()))) {
             String inputLine = null;
             while ((inputLine = reader.readLine()) != null) {
-                res += inputLine;
-                System.out.println(inputLine);
+                res += inputLine + "\n";
             }
         } catch (IOException x) {
             System.err.println(x);
