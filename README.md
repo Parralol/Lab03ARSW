@@ -288,35 +288,37 @@ java -cp target/lab03-1.0-SNAPSHOT.jar edu.escuelaing.arsw.ase.app.introduccion.
 This will launch the server, then start the client on another terminal with
 
 ```
-mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatClient'
+java -cp target/lab03-1.0-SNAPSHOT.jar edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatClient
 ```
-or (depending on your system)
-
-```
-mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatClient
-```
-
 #### Acceptance test
 
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4d914357-983b-4282-a6f5-3f05b77fd5ef)
-
-In this screenshot we can see how both server and client are active and running, the output is a bit off given that maven does not print every step it makes, however it works.
-
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4b14f473-71c6-4649-90b4-4e9e1996621d)
-
-As seen here, the terminal looks like is not working, however this screenshot was taken at the same time the cilent was working.
-
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/57acd11b-f430-4b9e-b196-9f6acd54ac0b)
-
-When the numbers start repeating is when the servers get's shut down, so it outputs the last time it was given, behaving as intended.
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/9f0cfe97-8721-450c-88ed-b6edece8f49a)
 
 
+In this screenshot we can see how the server starts, this allows us to know if the server started correctly
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/da729651-0f63-49c9-aa4d-af72120cef75)
+
+
+Here we can see how the program allows us to connect from both terminals entering the IP and port
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/dfebcc1f-0d8a-462d-b555-6ece3bf3c738)
+
+As seen here, the comunication is possible via both terminals.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/47542f1b-38cd-4315-aead-f1827523df5f)
+
+and serverside there's no input.
 
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Java](https://www.oracle.com/java/technologies/) - Programming Language
+* [HTML 5](https://html.spec.whatwg.org/multipage/) - HiperText Markup Lenguaje
+* [JavaScript](https://262.ecma-international.org/14.0/?_gl=1*1jesqaj*_ga*MTM5NDk2MzkzNS4xNzE5MDk5NzQ3*_ga_TDCK4DWEPP*MTcxOTA5OTc0Ni4xLjEuMTcxOTA5OTgwMC4wLjAuMA..) - Programming lenguage
+* [Css](https://www.w3.org/Style/CSS/Overview.en.html) - stylesheet language
 
+* 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
