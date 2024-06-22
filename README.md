@@ -43,7 +43,9 @@ mvn clean install
 
 **IN ORDER FOR ANY PROGRAM TO WORK, YOU'LL NEED TO EXECUTE THE PROGRAM ON THE FOLDER YOU WANT TO WORK WITH, WITH THE FILES YOU WANT TO WORK WITH**
 
+----------------------------------------
 ### First exercise
+----------------------------------------
 
 Write a program in which you create an URL object and print out each one of the data that return each of the 8 methods of the last section.
 
@@ -66,8 +68,9 @@ mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.URLRe
 
 The exception given in the last line is because the path used does not work, it's only for demostrative purposes.
 
-
+----------------------------------------
 ### Second exercise
+----------------------------------------
 
 Write a browser application that asks the user for a URL, reads data from that URL, and stores it in a file named resultado.html. Then, try to view this file in the browser.
 
@@ -103,8 +106,9 @@ and
 ![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/b9edaa29-8c8a-409c-8609-d7e9eec2731b)
 
 
-
+----------------------------------------
 ### Third excersice
+----------------------------------------
 
 Write a server that receives a number and responds with the square of that number.
 
@@ -146,8 +150,9 @@ here we can see how the server delivers the operation made and the message recie
 
 in the client side we can see how the input is delivered and the response corresponds to the Echo line.
 
-
+----------------------------------------
 ### Fourth exercise
+----------------------------------------
 
 Write a server that receives a number and responds with the square of that number.
 
@@ -194,7 +199,9 @@ in the client side we can see how the input is delivered and the response corres
 
 And as seen in the image, the operation changes successfully.
 
+----------------------------------------
 ### Fifth exercise
+----------------------------------------
 
 Write a web server that supports multiple sequential requests (not concurrent). The server must return all requested files, including HTML pages and images.
 
@@ -230,8 +237,9 @@ Each resource is stored in the highlited folder.
 
 As i couldn't record the whole screen, here's a screenshot of the terminal output.
 
-
+----------------------------------------
 ### Sixth exercise
+----------------------------------------
 
 Using Datagrams, write a program that connects to a server that responds with the current time on the server. The program should update the time every 5 seconds based on the server's data. If a time is not received, it should maintain the time it had. For the test, the server will be turned off and after a few seconds, it will be turned back on. The client must continue working and update itself when the server is functioning again
 
@@ -273,7 +281,9 @@ As seen here, the terminal looks like is not working, however this screenshot wa
 
 When the numbers start repeating is when the servers get's shut down, so it outputs the last time it was given, behaving as intended.
 
+----------------------------------------
 ### Seventh exercise
+----------------------------------------
 
 Using RMI, write an application that can connect to another application of the same type on a remote server to start a chat. The application should request an IP address and a port before connecting with the desired client. Likewise, it should request a port before starting to publish the object that receives remote calls on that port.
 
