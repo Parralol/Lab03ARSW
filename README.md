@@ -36,7 +36,7 @@ mvn -version
 First clone this proyect into your own system, then 
 
 ```
-mvn clean package
+mvn clean install
 ```
 
 ## Deployment
@@ -49,7 +49,7 @@ Write a program in which you create an URL object and print out each one of the 
 
 #### How to execute this program
 
-if you want to use the programm before using the package command we use
+if you want to use the programm **first** use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.URLReader'
@@ -73,7 +73,7 @@ Write a browser application that asks the user for a URL, reads data from that U
 
 #### How to execute this program
 
-if you want to use the programm before using the package command we use
+if you want to use the programm **first** use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio2'
@@ -110,7 +110,7 @@ Write a server that receives a number and responds with the square of that numbe
 
 #### How to execute this program
 
-if you want to use the programm before using the package command **first** use
+if you want to use the programm **first** use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio3'
@@ -153,7 +153,7 @@ Write a server that receives a number and responds with the square of that numbe
 
 #### How to execute this program
 
-if you want to use the programm before using the package command **first** use
+if you want to use the programm **first** use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio4'
@@ -200,33 +200,116 @@ Write a web server that supports multiple sequential requests (not concurrent). 
 
 #### How to execute this program
 
-if you want to use the programm before using the package command **first** use
+if you want to use the programm **first** use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio5'
 ```
 or (depending on your system)
 
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio5
+```
+
+
 To access you'll need to enter to [http://localhost:35000](http://localhost:35000)
 
 #### Acceptance test
 
-**is important to note that PI is delivered via terminal as the symbol ?**
 
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/250750a8-c36e-42c6-bfa8-c702974d92e4)
+https://github.com/Parralol/Lab03ARSW/assets/110953563/7338b2ca-5142-48a0-8e65-ce6abdac55bd
 
-In this screenshot we can see how both server and client are active and running
-
-
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/11efa5cc-553d-4dd1-b810-1bffb31ece86)
+in this video you can see how the server resolves every peticion
 
 
-in the client side we can see how the input is delivered and the response corresponds to the Echo line.
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/875de2b0-299e-4ccd-a0c6-b3cb1afd6bdc)
+
+Each resource is stored in the highlited folder.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/63fabf6b-4c22-4730-b7fe-d85acf85952e)
+
+As i couldn't record the whole screen, here's a screenshot of the terminal output.
 
 
-![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/ec845544-835e-43fa-95d8-466c4a6c4eab)
+### Sixth exercise
 
-And as seen in the image, the operation changes successfully.
+Using Datagrams, write a program that connects to a server that responds with the current time on the server. The program should update the time every 5 seconds based on the server's data. If a time is not received, it should maintain the time it had. For the test, the server will be turned off and after a few seconds, it will be turned back on. The client must continue working and update itself when the server is functioning again
+
+#### How to execute this program
+
+if you want to use the programm **first** use
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Datagram.DatagramTimeServer'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Datagram.DatagramTimeServer
+```
+
+This will launch the server, then start the client on another terminal with
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio6'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio6
+```
+
+#### Acceptance test
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4d914357-983b-4282-a6f5-3f05b77fd5ef)
+
+In this screenshot we can see how both server and client are active and running, the output is a bit off given that maven does not print every step it makes, however it works.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4b14f473-71c6-4649-90b4-4e9e1996621d)
+
+As seen here, the terminal looks like is not working, however this screenshot was taken at the same time the cilent was working.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/57acd11b-f430-4b9e-b196-9f6acd54ac0b)
+
+When the numbers start repeating is when the servers get's shut down, so it outputs the last time it was given, behaving as intended.
+
+### Seventh exercise
+
+Using RMI, write an application that can connect to another application of the same type on a remote server to start a chat. The application should request an IP address and a port before connecting with the desired client. Likewise, it should request a port before starting to publish the object that receives remote calls on that port.
+
+#### How to execute this program
+
+if you want to use the programm **first** use
+
+```
+java -cp target/lab03-1.0-SNAPSHOT.jar edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatServer
+```
+
+This will launch the server, then start the client on another terminal with
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatClient'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio7.ChatClient
+```
+
+#### Acceptance test
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4d914357-983b-4282-a6f5-3f05b77fd5ef)
+
+In this screenshot we can see how both server and client are active and running, the output is a bit off given that maven does not print every step it makes, however it works.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/4b14f473-71c6-4649-90b4-4e9e1996621d)
+
+As seen here, the terminal looks like is not working, however this screenshot was taken at the same time the cilent was working.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/57acd11b-f430-4b9e-b196-9f6acd54ac0b)
+
+When the numbers start repeating is when the servers get's shut down, so it outputs the last time it was given, behaving as intended.
+
 
 
 ## Built With
