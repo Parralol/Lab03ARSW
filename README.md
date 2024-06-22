@@ -49,7 +49,7 @@ Write a program in which you create an URL object and print out each one of the 
 
 #### How to execute this program
 
-if you want to use te programm before using the package command we use
+if you want to use the programm before using the package command we use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.URLReader'
@@ -73,7 +73,7 @@ Write a browser application that asks the user for a URL, reads data from that U
 
 #### How to execute this program
 
-if you want to use te programm before using the package command we use
+if you want to use the programm before using the package command we use
 
 ```
 mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio2'
@@ -103,6 +103,130 @@ and
 ![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/b9edaa29-8c8a-409c-8609-d7e9eec2731b)
 
 
+
+### Third excersice
+
+Write a server that receives a number and responds with the square of that number.
+
+#### How to execute this program
+
+if you want to use the programm before using the package command **first** use
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio3'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio3
+```
+
+This will launch the server, then start the client on another terminal with
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.SocketClient'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.SocketClient
+```
+
+#### Acceptance test
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/91ca2236-81e8-4831-9179-a02d74b11106)
+
+In this screenshot we can see how both server and client are active and running
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/8e45ce5b-c69c-4e2b-a9db-8a30d9502331)
+
+here we can see how the server delivers the operation made and the message recieved.
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/e9c3f2d1-7b9d-4613-918b-e1878e5cf193)
+
+in the client side we can see how the input is delivered and the response corresponds to the Echo line.
+
+
+### Fourth exercise
+
+Write a server that receives a number and responds with the square of that number.
+
+#### How to execute this program
+
+if you want to use the programm before using the package command **first** use
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio4'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio4
+```
+
+This will launch the server, then start the client on another terminal with
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.SocketClient'
+```
+or (depending on your system)
+
+```
+mvn -e exec:java -Dexec.mainClass=edu.escuelaing.arsw.ase.app.introduccion.SocketClient
+```
+
+#### Acceptance test
+
+**is important to note that PI is delivered via terminal as the symbol ?**
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/250750a8-c36e-42c6-bfa8-c702974d92e4)
+
+In this screenshot we can see how both server and client are active and running
+
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/11efa5cc-553d-4dd1-b810-1bffb31ece86)
+
+
+in the client side we can see how the input is delivered and the response corresponds to the Echo line.
+
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/ec845544-835e-43fa-95d8-466c4a6c4eab)
+
+And as seen in the image, the operation changes successfully.
+
+### Fifth exercise
+
+Write a web server that supports multiple sequential requests (not concurrent). The server must return all requested files, including HTML pages and images.
+
+#### How to execute this program
+
+if you want to use the programm before using the package command **first** use
+
+```
+mvn -e exec:java -Dexec'.mainClass=edu.escuelaing.arsw.ase.app.introduccion.Ejercicio5'
+```
+or (depending on your system)
+
+To access you'll need to enter to [http://localhost:35000](http://localhost:35000)
+
+#### Acceptance test
+
+**is important to note that PI is delivered via terminal as the symbol ?**
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/250750a8-c36e-42c6-bfa8-c702974d92e4)
+
+In this screenshot we can see how both server and client are active and running
+
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/11efa5cc-553d-4dd1-b810-1bffb31ece86)
+
+
+in the client side we can see how the input is delivered and the response corresponds to the Echo line.
+
+
+![image](https://github.com/Parralol/Lab03ARSW/assets/110953563/ec845544-835e-43fa-95d8-466c4a6c4eab)
+
+And as seen in the image, the operation changes successfully.
 
 
 ## Built With
