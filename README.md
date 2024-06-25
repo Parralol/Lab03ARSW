@@ -328,7 +328,6 @@ and serverside there's no input.
 * [JavaScript](https://262.ecma-international.org/14.0/?_gl=1*1jesqaj*_ga*MTM5NDk2MzkzNS4xNzE5MDk5NzQ3*_ga_TDCK4DWEPP*MTcxOTA5OTc0Ni4xLjEuMTcxOTA5OTgwMC4wLjAuMA..) - Programming lenguage
 * [Css](https://www.w3.org/Style/CSS/Overview.en.html) - stylesheet language
 
-* 
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
